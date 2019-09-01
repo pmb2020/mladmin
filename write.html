@@ -11,7 +11,7 @@
 		<header class="header">
 			<div class="header_l" style="">
 				<div class="logo">
-					<a href="/"><img src="images/logo.png" /></a>
+					<a href="index.html"><img src="images/logo.png" /></a>
 				</div>
 				<button id="bar" style="position: absolute;left: 230px;top: 10px;background-color:transparent;outline: none;border: 0;cursor: pointer;">
 					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
@@ -30,7 +30,7 @@
 		<nav class="nav">
 			<ul class="nav_ul">
 				<li><a href="write.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
-				<li><a href="/"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
+				<li><a href="list.html"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
 						 aria-hidden="true"></i></a></li>
 				<li><a href="/"><i class="fa fa-comments" aria-hidden="true"></i>评论管理</a></li>
 				<li><a href="/"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
@@ -45,14 +45,116 @@
 					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你嫁给w我！</p>
 				</div>
 				<div style="padding: 30px;">
-					<div style="padding: 10px;background-color: #fff;">
-						<input class="form-control" type="text" name="" id="" value="文章标题" />
+					<div class="main-box">
+						<!-- <label>标题：</label>
+						<div style="width: 40%;display: inline-block;">
+							<input class="form-control" type="text" name="" id="" placeholder="标题" />
+						</div> -->
+						<form action="" method="POST">
+							<div class="m_input_item">
+								<label>标题:</label>
+								<div class="m_input_box"><input class="m_input" type="text" name="title"></div>
+							</div>
+							<div class="m_input_item">
+								<label>类别：</label>
+								<select id="type" name="type" class="m_select">
+									<option value="0">爱生活</option>
+									<option value="1">爱技术</option>
+									<option value="2">爱分享</option>
+									<option value="3">爱拼搏</option>
+								</select>
+								<div id="stype">
+									<label>小分类：</label>
+									<select class="m_select">
+										<option value="4">html</option>
+										<option value="5">js</option>
+										<option value="6">其他</option>
+									</select>
+								</div>
+							</div>
+							<div class="m_input_item" style="height: 100%">
+								<label>内容：</label>
+								<input type="hidden" name="content" id="editor_txt">
+								<div id="editor" style="display: inline-block;width: 80%">
+								</div>
+							</div>
+							<div class="m_input_item" style="height: 180px">
+								<label>封面:</label>
+								<input type="hidden" id="img_url"  name="img_url">
+								<div id="drop_area" class="m_input_box"></div>
+							</div>
+							<div class="m_input_item">
+								<label></label>
+								<button id="fb_btn" class="m_btn" type="submit">发布</button>
+								<button class="m_btn" type="button">存草稿</button>
+							</div>
+						</form>
+						
 					</div>
-					
+
 				</div>
 			</div>
 		</div>
 	</body>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/wangEditor.min.js"></script>
+	<script src="js/upload.js"></script>
 	<script src="js/base.js"></script>
+	<script type="text/javascript">
+			var file='';
+			var dragImgUpload = new DragImgUpload("#drop_area",{
+			callback:function (files) {
+			//回调函数，可以传递给后台等等
+			var file = files[0];
+			// console.log(file);
+			var formdata = new FormData();
+			formdata.append("file" , file);
+			$.ajax({
+	        		url:'/admin.php/index/upload',
+	        		type:'POST',
+	        		data:formdata,
+	        		dataType:'json',
+	        		processData: false,// 不处理数据
+	                contentType: false,//不设置Content-Type请求头
+	        		success:function (data) {
+	        			console.log(data);
+	        			console.log(typeof(JSON.parse(data)));
+	        			var img_url=JSON.parse(data)['data'][0].slice(16);
+	        			$('#img_url').val(img_url);
+	        			// console.log('成功1111');
+	        		},
+	        		error:function (data) {
+	        			// console.log(data);
+	        			console.log('图片上传失败');
+	        		}
+	        		
+	        	})
+		}
+	})
+		</script>
+	<script type="text/javascript">
+	    var E = window.wangEditor;
+	    var editor = new E( document.getElementById('editor'));
+	    editor.customConfig.debug = true;
+	    editor.customConfig.uploadImgServer = '/admin.php/index/upload';
+	    editor.customConfig.uploadImgMaxSize = 5 * 1024 * 1024;
+		editor.customConfig.uploadImgMaxLength = 5;
+		editor.customConfig.uploadFileName = 'file';
+	    editor.create();
+	    $('#fb_btn').click(function () {
+	    	var editor_txt=editor.txt.html();
+	    	document.getElementById('editor_txt').value=editor_txt;
+	    	console.log(file);
+	    })
+	    $('#type').change(function (e) {
+	    	if ($(this).val()==2) {
+	    		console.log('asa');
+	    		$('#stype').css('display','inline-block');
+	    		$('#stype select').attr('name','type');
+	    	}else{
+	    		$('#stype').css('display','none');
+	    		$('#stype select').attr('name','');
+	    	}
+	    })
+	</script>
 </html>
