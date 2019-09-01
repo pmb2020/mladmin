@@ -6,10 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/base.css">
-		<style>
-			.nav_ul1 a{font-size: 14px;color: #9d9d9d;}
-			.nav_ul1 a i{margin-right: 15px;}
-		</style>
 	</head>
 	<body>
 		<header class="header">
@@ -17,7 +13,10 @@
 				<div class="logo">
 					<a href="#"><img src="images/logo.png" /></a>
 				</div>
-				<!-- <i class="fa fa-bars icon_fff" aria-hidden="true"></i> -->
+				<button id="bar" style="position: absolute;left: 230px;top: 10px;background-color:transparent;outline: none;border: 0;cursor: pointer;">
+					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
+				</button>
+
 			</div>
 			<div class="header_r" style="">
 				<ul class="header_ul ">
@@ -29,28 +28,17 @@
 			</div>
 		</header>
 		<nav class="nav">
-			<ul class="nav_ul1">
-				<li><a href="/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
-				<li><a href="/"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc" aria-hidden="true"></i></a></li>
+			<ul class="nav_ul">
+				<li><a href="write.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
+				<li><a href="/"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
+						 aria-hidden="true"></i></a></li>
 				<li><a href="/"><i class="fa fa-comments" aria-hidden="true"></i>评论管理</a></li>
 				<li><a href="/"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
 				<li><a href="/"><i class="fa fa-cog" aria-hidden="true"></i>系统设置</a></li>
 			</ul>
 		</nav>
-		<!-- <nav class="nav">
-			<div style="text-align: center;">
-				<img style="border-radius: 50%;width: 100px;height: 100px;margin: 20px 0;" src="http://www.0ling.xyz/images/head.png" />
-			</div>
-			<ul class="nav_ul">
-				<li><a href="/"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
-				<li><a href="/"><i class="fa fa-book" aria-hidden="true"></i>文章管理</a></li>
-				<li><a href="/"><i class="fa fa-comments" aria-hidden="true"></i>评论管理</a></li>
-				<li><a href="/"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
-				<li><a href="/"><i class="fa fa-cog" aria-hidden="true"></i>系统设置</a></li>
-			</ul>
-		</nav> -->
-		<div class="main" style="">
 
+		<div class="main" style="">
 			<div class="main-content">
 				<div class="main-top">
 					<p class="mbaoxie"><a href="/">首页</a><span>/</span>系统设置</p>
@@ -118,4 +106,6 @@
 			</div>
 		</div>
 	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/base.js"></script>
 </html>
