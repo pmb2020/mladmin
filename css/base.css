@@ -13,7 +13,7 @@ a {
 	outline: none;
 }
 
-ul {
+ul,ol {
 	list-style: none;
 }
 
@@ -314,8 +314,9 @@ transition: left 0.8s;
     width: 100%;
     max-width: 100%;
     margin: 16px 0;
+	border-collapse: collapse;
     background-color: transparent;
-	color: #555;
+	color: #666;
 	font-size: 14px;
 }
 .table td, .table th {
@@ -324,8 +325,15 @@ transition: left 0.8s;
     border-bottom: 1px solid #dee2e6;
 }
 .table td {
-    /* line-height: 36px; */
 	color: #666;
 	text-align: center;
 }
+.add_border0{margin: 0;}
+.add_border0 td{border-bottom: 0;}
+.right_border td{border-right: 1px solid #f0f0f0;}
+.right_border td:last-child{border-right:0}
 
+.calendar-hd{box-sizing: content-box;}
+.calendarAdd1{color: #111;}
+/* .calendarAdd1 .calendar-ct .days li{line-height: 50px !important;height: 50px!important;} */
+.old{color: #ccc;}

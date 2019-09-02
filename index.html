@@ -5,7 +5,18 @@
 		<title>迷鹿后台管理系统</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="css/calender.css">
 		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style>
+			 #calendar {
+			     width: 100%;
+			     /* margin: 150px auto; */
+				 background-color: #fff;
+				 border-radius: 5px;
+				 box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+				 padding: 30px;
+			 }
+		</style>
 	</head>
 	<body>
 		<header class="header">
@@ -33,7 +44,7 @@
 				<li><a href="list.html"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
 						 aria-hidden="true"></i></a></li>
 				<li><a href="comment.html"><i class="fa fa-comments" aria-hidden="true"></i>评论管理</a></li>
-				<li><a href="/"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
+				<li><a href="tongji.html"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
 				<li><a href="/"><i class="fa fa-cog" aria-hidden="true"></i>系统设置</a></li>
 			</ul>
 		</nav>
@@ -81,10 +92,13 @@
 					</div>
 					<div class="row mar300">
 						<div class="col-md-8 padd015">
-							<div class="my_chart">
+							<div id="calendar">
+							    <div id="ca"></div>
+							</div>
+							<!-- <div class="my_chart">
 								<p class="" style="color: #888;font-size: 18px;">流量统计</p>
 								<img src="images/number.png">
-							</div>
+							</div> -->
 						</div>
 						<div class="col-md-4 padd015">
 							<div class="my_card">
@@ -108,4 +122,29 @@
 	</body>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/base.js"></script>
+	<script src="js/calendar.js"></script>
+	<script>
+		var calendarWidth=$('#calendar').width();
+		console.log(calendarWidth);
+	    $('#ca').calendar({
+	        width: calendarWidth,
+	        height: 350,
+			customClass:'calendarAdd1',
+	        data: [
+	            {
+	                date: '2019/09/02',
+	                value: '不知道干什么'
+	            },
+	            {
+	                date: '2019/10/01',
+	                value: '国庆节'
+	            }
+	        ],
+	        onSelected: function (view, date, data) {
+	            console.log('view:' + view)
+	            console.log('date:' + date)
+	            console.log('data:' + (data || 'None'));
+	        }
+	    });
+	</script>
 </html>
