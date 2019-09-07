@@ -10,12 +10,12 @@
 		<style>
 			 #calendar {
 			     width: 100%;
-			     /* margin: 150px auto; */
 				 background-color: #fff;
 				 border-radius: 5px;
 				 box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 				 padding: 30px;
 			 }
+			 
 		</style>
 	</head>
 	<body>
@@ -24,7 +24,7 @@
 				<div class="logo">
 					<a href="#"><img src="images/logo.png" /></a>
 				</div>
-				<button id="bar" style="position: absolute;left: 230px;top: 10px;background-color:transparent;outline: none;border: 0;cursor: pointer;">
+				<button id="bar" style="">
 					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
 				</button>
 
@@ -38,7 +38,7 @@
 				</ul>
 			</div>
 		</header>
-		<nav class="nav">
+		<nav class="nav mw0">
 			<ul class="nav_ul">
 				<li><a href="write.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
 				<li><a href="list.html"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
@@ -53,11 +53,11 @@
 			<div class="main-content">
 				<div class="main-top">
 					<p class="mbaoxie"><a href="/">首页</a><span>/</span>系统设置</p>
-					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你嫁给w我！</p>
+					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你！</p>
 				</div>
-				<div style="padding: 30px;">
+				<div class="box_padd30">
 					<div class="row">
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="my_card padd2045">
 								<i class="fa fa-book" aria-hidden="true" style="font-size: 50px;color: #ab8ce4;margin-right: 15px;"></i>
 								<p style="font-size: 16px;color: #888;display: inline-block;">
@@ -65,7 +65,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="my_card padd2045">
 								<i class="fa fa-user" aria-hidden="true" style="font-size: 50px;color: #ab8ce4;margin-right: 15px;"></i>
 								<p style="font-size: 16px;color: #888;display: inline-block;">
@@ -73,7 +73,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="my_card padd2045">
 								<i class="fa fa-commenting-o" aria-hidden="true" style="font-size: 50px;color: #ab8ce4;margin-right: 15px;"></i>
 								<p style="font-size: 16px;color: #888;display: inline-block;">
@@ -81,7 +81,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="col-md-3">
+						<div class="col-md-3 col-6">
 							<div class="my_card padd2045">
 								<i class="fa fa-gift" aria-hidden="true" style="font-size: 50px;color: #ab8ce4;margin-right: 15px;"></i>
 								<p style="font-size: 16px;color: #888;display: inline-block;">
@@ -124,27 +124,6 @@
 	<script src="js/base.js"></script>
 	<script src="js/calendar.js"></script>
 	<script>
-		var calendarWidth=$('#calendar').width();
-		console.log(calendarWidth);
-	    $('#ca').calendar({
-	        width: calendarWidth,
-	        height: 350,
-			customClass:'calendarAdd1',
-	        data: [
-	            {
-	                date: '2019/09/02',
-	                value: '不知道干什么'
-	            },
-	            {
-	                date: '2019/10/01',
-	                value: '国庆节'
-	            }
-	        ],
-	        onSelected: function (view, date, data) {
-	            console.log('view:' + view)
-	            console.log('date:' + date)
-	            console.log('data:' + (data || 'None'));
-	        }
-	    });
+		
 	</script>
 </html>
