@@ -273,7 +273,7 @@ ul:after {
 }
 
 .header_ul li:hover {
-	background-color: #167758;
+	/* background-color: #167758; */
 }
 
 .header_name {
@@ -509,7 +509,7 @@ ul:after {
 	color: #666;
 	font-size: 14px;
 }
-
+.table a{display: inline-block;color: #349EDF;}
 .table td,
 .table th {
 	padding: 10px;
@@ -517,10 +517,6 @@ ul:after {
 	border-bottom: 1px solid #dee2e6;
 }
 
-.table td {
-	color: #666;
-	text-align: center;
-}
 
 .add_border0 {
 	margin: 0;
@@ -537,7 +533,14 @@ ul:after {
 .right_border td:last-child {
 	border-right: 0
 }
-
+/* 日历 */
+#calendar {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+	padding: 30px;
+}
 .calendar-hd {
 	box-sizing: content-box;
 }

@@ -6,6 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style>
+			.com_p{color: #999;margin-bottom: 15px;}
+			.com_name{color: #333;}
+			.com_time{margin: 0 5px;}
+			.blue_a{display: inline-block;color: #349EDF;margin-left: 5px;}
+			.com_title{color: #666;position: relative;}
+			.com_title i{color: #1fa67a;}
+			.com_a_box{display: inline-block;float: right;}
+			.com_a_box a{display: inline-block;color: #349EDF;margin-left: 10px;font-size: 14px;}
+		</style>
 	</head>
 	<body>
 		<header class="header">
@@ -13,7 +23,7 @@
 				<div class="logo">
 					<a href="#"><img src="images/logo.png" /></a>
 				</div>
-				<button id="bar" style="position: absolute;left: 230px;top: 10px;background-color:transparent;outline: none;border: 0;cursor: pointer;">
+				<button id="bar">
 					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
 				</button>
 
@@ -30,8 +40,7 @@
 		<nav class="nav">
 			<ul class="nav_ul">
 				<li><a href="write.html"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>写文章</a></li>
-				<li><a href="list.html"><i class="fa fa-book" aria-hidden="true"></i>文章管理<i style="margin-left: 80px;" class="fa fa-sort-desc"
-						 aria-hidden="true"></i></a></li>
+				<li><a href="list.html"><i class="fa fa-book" aria-hidden="true"></i>文章管理</a></li>
 				<li><a href="comment.html"><i class="fa fa-comments" aria-hidden="true"></i>评论管理</a></li>
 				<li><a href="webtj.html"><i class="fa fa-line-chart" aria-hidden="true"></i>网站统计</a></li>
 				<li><a href="webset.html"><i class="fa fa-cog" aria-hidden="true"></i>系统设置</a></li>
@@ -44,97 +53,84 @@
 					<p class="mbaoxie"><a href="/">首页</a><span>/</span>评论管理</p>
 					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你嫁给w我！</p>
 				</div>
-				<div style="padding: 30px;">
+				<div class="box_padd30">
 					<div class="main-box">
 						<ul class="ul_tag" style="border-bottom: 0;">
 							<li class="active"><a href="#">全部(54)</a></li>
-							<li><a href="#">已删除(45)</a></li>
+							<li><a href="#">我回复的(23)</a></li>
 						</ul>
-						<table class="table">
-							<colgroup>
-								<col width="5%">
-								<col width="">
-								<col width="15%">
-								<col width="">
-								<col width="9%">
-								<col width="15%">
-							</colgroup>
-							<thead>
-								<tr>
-									<th>id</th>
-									<th>内容</th>
-									<th>评论人</th>
-									<th>所属文章</th>
-									<th>时间</th>
-									<th>操作</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<th>1</th>
-									<td>男子Kolor茶衬衫</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
+						<ul class="list_ul">
+							<li>
+								<p class="com_p">
+									<span class="com_name">一瓶二锅头</span><span class="com_time">8小时前</span>评论你的文章<a class="blue_a" href="#">php引用变量就是这么简单</a>
+								</p>
+								<div class="com_title">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+									&nbsp;&nbsp;真的太好用了，谢谢博主&nbsp;&nbsp;
+									<i class="fa fa-quote-right" aria-hidden="true"></i>
+									<div class="com_a_box">
+										<a href="#">回复</a>
 										<a href="#">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<th>2</th>
-									<td>男子Kolor茶衬衫</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="com_p">
+									<span class="com_name">一瓶二锅头</span><span class="com_time">8小时前</span>评论你的文章<a class="blue_a" href="#">html简易登陆注册模板</a>
+								</p>
+								<div class="com_title">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+									&nbsp;&nbsp;欢迎光临我的后台管理系统&nbsp;&nbsp;
+									<i class="fa fa-quote-right" aria-hidden="true"></i>
+									<div class="com_a_box">
+										<a href="#">回复</a>
 										<a href="#">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<th>3</th>
-									<td>评论者加ip及地址，25分钟前，按文章查看评论，按ip评论者查看评论</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="com_p">
+									<span class="com_name">一瓶二锅头</span><span class="com_time">8小时前</span>评论你的文章<a class="blue_a" href="#">wangEditor3富文本编辑器的简单使用</a>
+								</p>
+								<div class="com_title">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+									&nbsp;&nbsp;网站怎么添加ico小图标&nbsp;&nbsp;
+									<i class="fa fa-quote-right" aria-hidden="true"></i>
+									<div class="com_a_box">
+										<a href="#">回复</a>
 										<a href="#">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<th>4</th>
-									<td>需要封禁IP功能</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
-										<a href="#">修改</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="com_p">
+									<span class="com_name">一瓶二锅头</span><span class="com_time">8小时前</span>评论你的文章<a class="blue_a" href="#">php安装及使用redis（就是这么简单）</a>
+								</p>
+								<div class="com_title">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+									&nbsp;&nbsp;php安装及使用redis（就是这么简单）&nbsp;&nbsp;
+									<i class="fa fa-quote-right" aria-hidden="true"></i>
+									<div class="com_a_box">
+										<a href="#">回复</a>
 										<a href="#">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<th>5</th>
-									<td>需要封禁IP功能</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
-										<a href="#">修改</a>
+									</div>
+								</div>
+							</li>
+							<li>
+								<p class="com_p">
+									<span class="com_name">一瓶二锅头</span><span class="com_time">8小时前</span>评论你的文章<a class="blue_a" href="#">由于找不到MSVCR110.dll,无法继续执行代码........启动的解决方法</a>
+								</p>
+								<div class="com_title">
+									<i class="fa fa-quote-left" aria-hidden="true"></i>
+									&nbsp;&nbsp;真的太好用了，谢谢博主&nbsp;&nbsp;
+									<i class="fa fa-quote-right" aria-hidden="true"></i>
+									<div class="com_a_box">
+										<a href="#">回复</a>
 										<a href="#">删除</a>
-									</td>
-								</tr>
-								<tr>
-									<th>6</th>
-									<td>需要封禁IP功能</td>
-									<td>林中鸟(127.0.15.1)</td>
-									<td>第一篇文章</td>
-									<td>2019.08.08 13:05:01</td>
-									<td>
-										<a href="#">修改</a>
-										<a href="#">删除</a>
-									</td>
-								</tr>
-							</tbody>
-						</table>
+									</div>
+								</div>
+							</li>							
+						</ul>
 					</div>
 
 				</div>
