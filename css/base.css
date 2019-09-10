@@ -49,7 +49,7 @@ ul:after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
+.del_a{color: #f96332!important;}
 .my_card {
 	background-color: #fff;
 	border-radius: 5px;
@@ -165,6 +165,8 @@ ul:after {
 	background-color: #fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 	border-radius: 5px;
+	overflow-x: auto;
+	margin-bottom: 15px;
 }
 
 .form-control {
@@ -556,3 +558,14 @@ ul:after {
 .old {
 	color: #ccc;
 }
+/* 评论列表 */
+.com_p{color: #999;margin-bottom: 10px;line-height: 24px;position: relative;}
+.com_name{color: #333;}
+.com_time{margin: 0 5px;}
+.blue_a{display: inline-block;color: #349EDF;margin-left: 5px;margin-top: 8px;}
+.com_title{color: #666;position: relative;}
+.com_title i{color: #1fa67a;}
+.com_a_box{display: inline-block;float: right;position: absolute;top: 0;right: 0;}
+.com_a_box a{display: inline-block;color: #349EDF;margin-left: 10px;font-size: 14px;}
+
+.addtable1{background-color: #fff;width: 100%;white-space: nowrap;}
