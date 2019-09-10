@@ -218,6 +218,7 @@ ul:after {
 		max-width: 50%;
 		box-sizing: border-box;
 	}
+	.d-none{display: none!important;}
 	.header_r{display: none!important}
 	#bar{left: 20px!important;}
 	.main-top{margin-bottom: 15px;}
@@ -228,16 +229,19 @@ ul:after {
 	.logo img{height: 40px!important;}
 	.box_padd30{padding: 0!important;}
 	#calendar{padding: 15px!important;}
-	.main-box{margin: 15px;padding: 15px!important;}
+	.main-box{
+		/* margin: 15px; */
+		padding: 15px!important;}
 	.list_title{font-size: 16px!important;}
 	.list_info_left span{margin-right: 5px!important;}
+	
+	
 }
 
 
 
-
-
 .header {
+	/* #ff3d37 红色*/
 	background-color: #1fa67a;
 	height: 55px;
 }
