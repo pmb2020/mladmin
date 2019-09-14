@@ -221,7 +221,11 @@ ul:after {
 		box-sizing: border-box;
 	}
 	.d-none{display: none!important;}
-	.header_r{display: none!important}
+	.header_r{position: relative;bottom: 55px;right: 0;}
+	#avatar{width: 50px;height: 55px;}
+	.header_ul{margin-right: 15px!important;}
+	
+	
 	#bar{left: 20px!important;}
 	.main-top{margin-bottom: 15px;}
 	.main-gg{display: none!important;}
@@ -244,7 +248,7 @@ ul:after {
 
 .header {
 	/* #ff3d37 红色*/
-	background-color: #1fa67a;
+	background-color: #ff3d37;
 	height: 55px;
 }
 
@@ -271,7 +275,7 @@ ul:after {
 	height: 50px;
 	vertical-align: middle;
 }
-
+.header_ul {margin-right: 25px;}
 .header_ul li {
 	float: left;
 	line-height: 55px;
@@ -287,6 +291,7 @@ ul:after {
 	padding-left: 10px;
 	margin-right: 5px;
 	font-size: 15px;
+	margin-left: 35px;
 }
 .box_padd30{padding: 30px;}
 .icon_fff {
@@ -569,3 +574,27 @@ ul:after {
 .com_a_box a{display: inline-block;color: #349EDF;margin-left: 10px;font-size: 14px;}
 
 .addtable1{background-color: #fff;width: 100%;white-space: nowrap;}
+
+.min_num{position: relative;}
+			.min_num span{
+				display: inline-block;
+				    min-width: 10px;
+				    padding: 3px 7px;
+				    font-size: 12px;
+				    font-weight: 700;
+				    line-height: 1;
+				    color: #fff;
+				    text-align: center;
+				    white-space: nowrap;
+				    vertical-align: middle;
+				    background-color: red;
+				    border-radius: 10px;
+					position: absolute;
+					left: 20px;top: -8px;
+				}
+			#avatar{position: relative;cursor: pointer;}
+			#avatar img{position: absolute;width: 36px;height: auto;border-radius: 50%;top: 15%;}
+			.avatar_box{position: absolute;top: 55px;width: 100%;right: 0;background-color: #fff;color: #666;z-index: 999;font-size: 14px;
+			border: 1px solid #e7e7e7;border-top: 0;box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+			}
+			.avatar_box li{width: 100%;}

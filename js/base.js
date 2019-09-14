@@ -33,7 +33,6 @@ $(function() {
 	if($(document).width()<=576){
 		var calendarWidth=$(document).width()-60;
 	}
-	console.log(calendarWidth+'日历的宽');
 	$('#ca').calendar({
 	    width: calendarWidth,
 	    height: calendarHeight,
@@ -54,5 +53,19 @@ $(function() {
 	        // console.log('data:' + (data || 'None'));
 	    }
 	});
+	// 点击头像弹出退出选项
+	$('#avatar').click(function(){
+		$('.avatar_box').show();
+		event.stopPropagation();
+	})
+	$(document).click(function(){
+		if($('.avatar_box').css('display')=='block'){
+			$('.avatar_box').hide();
+		}
+	})
+	
+	
+	
+	
 	
 })
