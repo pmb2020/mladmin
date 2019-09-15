@@ -27,32 +27,35 @@ $(function() {
 		console.log('点击了');
 	}
 	
-	//日历
-	var calendarWidth=$('#calendar').width();
-	var calendarHeight=350;
-	if($(document).width()<=576){
-		var calendarWidth=$(document).width()-60;
+	//日历,先判断日历元素是否存在
+	if ($('#calendar')[0]) {
+		var calendarWidth=$('#calendar').width();
+		var calendarHeight=350;
+		if($(document).width()<=576){
+			var calendarWidth=$(document).width()-60;
+		}
+		$('#ca').calendar({
+		    width: calendarWidth,
+		    height: calendarHeight,
+			customClass:'calendarAdd1',
+		    data: [
+		        {
+		            date: '2019/09/02',
+		            value: '不知道干什么'
+		        },
+		        {
+		            date: '2019/10/01',
+		            value: '国庆节'
+		        }
+		    ],
+		    onSelected: function (view, date, data) {
+		        // console.log('view:' + view)
+		        // console.log('date:' + date)
+		        // console.log('data:' + (data || 'None'));
+		    }
+		});
 	}
-	$('#ca').calendar({
-	    width: calendarWidth,
-	    height: calendarHeight,
-		customClass:'calendarAdd1',
-	    data: [
-	        {
-	            date: '2019/09/02',
-	            value: '不知道干什么'
-	        },
-	        {
-	            date: '2019/10/01',
-	            value: '国庆节'
-	        }
-	    ],
-	    onSelected: function (view, date, data) {
-	        // console.log('view:' + view)
-	        // console.log('date:' + date)
-	        // console.log('data:' + (data || 'None'));
-	    }
-	});
+	
 	// 点击头像弹出退出选项
 	$('#avatar').click(function(){
 		$('.avatar_box').show();

@@ -240,6 +240,7 @@ ul:after {
 		padding: 15px!important;}
 	.list_title{font-size: 16px!important;}
 	.list_info_left span{margin-right: 5px!important;}
+	.m_input_box{width: 100%!important;}
 	
 	
 }
@@ -247,7 +248,7 @@ ul:after {
 
 
 .header {
-	/* #ff3d37 红色*/
+	/* #ff3d37 红色;#1fa67a青色*/
 	background-color: #ff3d37;
 	height: 55px;
 }
@@ -274,6 +275,7 @@ ul:after {
 .logo img {
 	height: 50px;
 	vertical-align: middle;
+	margin-top: 2px;
 }
 .header_ul {margin-right: 25px;}
 .header_ul li {
@@ -598,3 +600,7 @@ ul:after {
 			border: 1px solid #e7e7e7;border-top: 0;box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 			}
 			.avatar_box li{width: 100%;}
+
+
+
+

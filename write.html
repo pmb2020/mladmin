@@ -6,6 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style>
+			/* 编辑器 */
+			.w-e-toolbar .w-e-menu{padding: 10px 15px!important;}
+			.w-e-text-container{height: 380px!important;}
+			@media screen and (max-width:576px) {
+			#editor{width: 100%!important;}
+			.w-e-toolbar .w-e-menu{padding: 8px 10px!important;}
+			.w-e-text-container{height: 300px!important;}
+			}
+			
+		</style>
 	</head>
 	<body>
 		<header class="header">
@@ -52,7 +63,7 @@
 					<p class="mbaoxie"><a href="/">首页</a><span>/</span>写文章</p>
 					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你嫁给w我！</p>
 				</div>
-				<div style="padding: 30px;">
+				<div class="box_padd30">
 					<div class="main-box">
 						<!-- <label>标题：</label>
 						<div style="width: 40%;display: inline-block;">
@@ -147,8 +158,41 @@
 	    editor.customConfig.uploadImgServer = '/admin.php/index/upload';
 	    editor.customConfig.uploadImgMaxSize = 5 * 1024 * 1024;
 		editor.customConfig.uploadImgMaxLength = 5;
+		editor.customConfig.height=800;
 		editor.customConfig.uploadFileName = 'file';
+		// 自定义菜单配置
+		    editor.customConfig.menus = [
+		        'head',  // 标题
+		        'bold',  // 粗体
+		        'fontSize',  // 字号
+		        'foreColor',  // 文字颜色
+		        'backColor',  // 背景颜色
+		        'link',  // 插入链接
+		        'list',  // 列表
+		        'justify',  // 对齐方式
+		        'quote',  // 引用
+		        'emoticon',  // 表情
+		        'image',  // 插入图片
+		        'table',  // 表格
+		        'video',  // 插入视频
+		        'code',  // 插入代码
+		        'undo',  // 撤销
+		    ]
+			if($(document).width()<=576){
+				editor.customConfig.menus = [
+				    'head',  // 标题
+				    'bold',  // 粗体
+				    'foreColor',  // 文字颜色
+				    'backColor',  // 背景颜色
+				    'link',  // 插入链接
+				    'quote',  // 引用
+				    'emoticon',  // 表情
+				    'image',  // 插入图片
+				    'undo',  // 撤销
+				]
+			}
 	    editor.create();
+		
 	    $('#fb_btn').click(function () {
 	    	var editor_txt=editor.txt.html();
 	    	document.getElementById('editor_txt').value=editor_txt;
