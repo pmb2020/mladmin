@@ -67,6 +67,16 @@ $(function() {
 		}
 	})
 	
+		// tab选项卡切换(tab内容中不能有div标签)
+	     $('#tab-tit li').click(function() {
+	        $(this).siblings().removeClass('selected');
+	        $(this).addClass('selected');
+	        var index = $(this).index();  // 获取当前点击元素的下标class="tab-child"
+			$('#tab-con .tab-child').hide();
+			$('#tab-con .tab-child').eq(index).show();
+	    })
+
+	    
 	
 	
 	

@@ -21,15 +21,15 @@
 				<ul class="header_ul ">
 					<li><i class="fa fa-bell-o icon_fff min_num" aria-hidden="true"><span>2</span></i></li>
 					<li id="avatar">
-					<img src="http://img0.imgtn.bdimg.com/it/u=3616660187,4185961025&fm=26&gp=0.jpg" alt="">
-					<span class="header_name d-none">管理员</span>
-					<i class="fa fa-sort-desc icon_fff d-none" aria-hidden="true"></i>
-					<div class="avatar_box" style="display: none;">
-						<ul>
-							<li>设置</li>
-							<li><a href="#">退出</a></li>
-						</ul>
-					</div>
+						<img src="http://img0.imgtn.bdimg.com/it/u=3616660187,4185961025&fm=26&gp=0.jpg" alt="">
+						<span class="header_name d-none">管理员</span>
+						<i class="fa fa-sort-desc icon_fff d-none" aria-hidden="true"></i>
+						<div class="avatar_box" style="display: none;">
+							<ul>
+								<li>设置</li>
+								<li><a href="#">退出</a></li>
+							</ul>
+						</div>
 					</li>
 				</ul>
 			</div>
@@ -52,16 +52,55 @@
 					<p class="mbaoxie"><a href="/">首页</a><span>/</span>系统设置</p>
 					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你嫁给w我！</p>
 				</div>
-				<div style="padding: 30px;">
-					<div class="main-box">
-						<p>系统设置待开发</p>
-						
+				<div class="box_padd30">
+					<div class="main-box" style="overflow-x: unset;">
+						<!-- <p>系统设置待开发</p> -->
+						<div class="tab">
+							<div class="tab-tit" id="tab-tit">
+								<ul>
+									<li class="selected">基本设置</li>
+									<li>评论设置</li>
+									<li>页面设置</li>
+								</ul>
+							</div>
+							<div class="tab-con" id="tab-con">
+								<div class="tab-child" style="display:block">
+									<div>
+										<form action="#" method="post">
+											<div class="m_input_item set_input">
+												<label>网站标题</label>
+												<div class="m_input_box"><input class="m_input" value="K先生的博客( www.gold404.cn )" type="text" name="title"></div>
+											</div>
+											<div class="m_input_item set_input">
+												<label>副标题</label>
+												<div class="m_input_box"><input class="m_input" value="一个分享源码的个人博客" type="text" name="title"></div>
+											</div>
+											<div class="clear" style="margin: 15px 0;">
+												<label style="float: left;width: 100px;">网站描述</label>
+												<div class="m_input_box" style="height: 100px;">
+													<textarea class="m_textarea">一个分享html、php源码等资源以及交流学习技术的个人博客！K先生是我的影，那些年我踩过的坑，不想让别人再踩，因为，我深知其中的苦和泪</textarea>
+												</div>
+											</div>
+										
+											<div class="m_input_item set_input">
+												<label>备案号</label>
+												<div class="m_input_box"><input class="m_input" value="豫ICP备16027903号-3" type="text" name="title"></div>
+											</div>
+											<input class="m_btn" type="submit" value="保存" />
+										</form>
+									</div>
+								</div>
+								<div class="tab-child">评论设置</div>
+								<div class="tab-child">页面设置</div>
+							</div>
+						</div>
+
 					</div>
 
 				</div>
 			</div>
 		</div>
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/base.js"></script>
 	</body>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/base.js"></script>
 </html>

@@ -24,7 +24,11 @@ ul:after {
 	clear: both;
 	display: block;
 }
-
+.clear:after{
+	content: '';
+	clear: both;
+	display: block;
+}
 /* 我的自定义样式 */
 .row {
 	display: -webkit-box;
@@ -35,9 +39,19 @@ ul:after {
 	width: 100%;
 }
 
-.col-md,.col-md-1,.col-md-2,.col-md-3,.col-md-4,
-.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,
-.col-md-10,.col-md-11,.col-md-12 {
+.col-md,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12 {
 	position: relative;
 	width: 100%;
 	min-height: 1px;
@@ -49,7 +63,11 @@ ul:after {
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.del_a{color: #f96332!important;}
+
+.del_a {
+	color: #f96332 !important;
+}
+
 .my_card {
 	background-color: #fff;
 	border-radius: 5px;
@@ -75,28 +93,35 @@ ul:after {
 .padd015 {
 	padding: 0 15px;
 }
+
 .padd30 {
 	padding: 30px;
 }
+
 .padd2045 {
 	padding: 20px 45px;
 }
+
 .mar150 {
 	margin: 15px 0;
 }
+
 .mt15 {
 	margin-top: 15px;
 }
+
 .mar200 {
 	margin: 20px 0;
 }
+
 .mar300 {
 	margin: 30px 0;
 }
 
 .m_input_item {
 	height: 40px;
-	margin: 15px 0;
+	/* margin: 15px 0; */
+	margin-bottom: 15px;
 }
 
 .m_input_item label {
@@ -150,7 +175,7 @@ ul:after {
 	border-radius: 2px;
 	cursor: pointer;
 }
-
+.m_textarea{width: 100%;resize: none;padding: 10px;border-radius: 4px;border: 1px solid #c8cccf;height: 100%;}
 #stype {
 	display: inline-block;
 }
@@ -220,30 +245,85 @@ ul:after {
 		max-width: 50%;
 		box-sizing: border-box;
 	}
-	.d-none{display: none!important;}
-	.header_r{position: relative;bottom: 55px;right: 0;}
-	#avatar{width: 50px;height: 55px;}
-	.header_ul{margin-right: 15px!important;}
-	.avatar_box{width: 250%!important;}
-	
-	
-	#bar{left: 20px!important;}
-	.main-top{margin-bottom: 15px;}
-	.main-gg{display: none!important;}
-	.header_l{width: 100%;}
-	.logo{margin: 0 auto;}
-	.logo a{line-height: 53px;}
-	.logo img{height: 40px!important;}
-	.box_padd30{padding: 0!important;}
-	#calendar{padding: 15px!important;}
-	.main-box{
+
+	.d-none {
+		display: none !important;
+	}
+
+	.header_r {
+		position: relative;
+		bottom: 55px;
+		right: 0;
+	}
+
+	#avatar {
+		width: 50px;
+		height: 55px;
+	}
+
+	.header_ul {
+		margin-right: 15px !important;
+	}
+
+	.avatar_box {
+		width: 250% !important;
+	}
+
+
+	#bar {
+		left: 20px !important;
+	}
+
+	.main-top {
+		margin-bottom: 15px;
+	}
+
+	.main-gg {
+		display: none !important;
+	}
+
+	.header_l {
+		width: 100%;
+	}
+
+	.logo {
+		margin: 0 auto;
+	}
+
+	.logo a {
+		line-height: 53px;
+	}
+
+	.logo img {
+		height: 40px !important;
+	}
+
+	.box_padd30 {
+		padding: 0 !important;
+	}
+
+	#calendar {
+		padding: 15px !important;
+	}
+
+	.main-box {
 		/* margin: 15px; */
-		padding: 15px!important;}
-	.list_title{font-size: 16px!important;}
-	.list_info_left span{margin-right: 5px!important;}
-	.m_input_box{width: 100%!important;}
-	
-	
+		padding: 15px !important;
+	}
+
+	.list_title {
+		font-size: 16px !important;
+	}
+
+	.list_info_left span {
+		margin-right: 5px !important;
+	}
+
+	.m_input_box {
+		width: 100% !important;
+	}
+
+
 }
 
 
@@ -264,9 +344,17 @@ ul:after {
 	float: right;
 	height: 100%;
 }
-#bar{
-	position: absolute;left: 230px;top: 10px;background-color:transparent;outline: none;border: 0;cursor: pointer;
+
+#bar {
+	position: absolute;
+	left: 230px;
+	top: 10px;
+	background-color: transparent;
+	outline: none;
+	border: 0;
+	cursor: pointer;
 }
+
 .logo {
 	width: 230px;
 	text-align: center;
@@ -278,7 +366,11 @@ ul:after {
 	vertical-align: middle;
 	margin-top: 2px;
 }
-.header_ul {margin-right: 25px;}
+
+.header_ul {
+	margin-right: 25px;
+}
+
 .header_ul li {
 	float: left;
 	line-height: 55px;
@@ -296,7 +388,11 @@ ul:after {
 	font-size: 15px;
 	margin-left: 35px;
 }
-.box_padd30{padding: 30px;}
+
+.box_padd30 {
+	padding: 30px;
+}
+
 .icon_fff {
 	color: #fff;
 	font-size: 20px;
@@ -397,7 +493,11 @@ ul:after {
 .mbaoxie span {
 	margin: 0 5px;
 }
-.box_padd30 .col-md-3{margin-bottom: 15px;}
+
+.box_padd30 .col-md-3 {
+	margin-bottom: 15px;
+}
+
 .main-gg {
 	float: right;
 	color: #888;
@@ -524,7 +624,12 @@ ul:after {
 	color: #666;
 	font-size: 14px;
 }
-.table a{display: inline-block;color: #349EDF;}
+
+.table a {
+	display: inline-block;
+	color: #349EDF;
+}
+
 .table td,
 .table th {
 	padding: 10px;
@@ -548,6 +653,7 @@ ul:after {
 .right_border td:last-child {
 	border-right: 0
 }
+
 /* 日历 */
 #calendar {
 	width: 100%;
@@ -556,52 +662,172 @@ ul:after {
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 	padding: 30px;
 }
+
 .calendar-hd {
 	box-sizing: content-box;
 }
+
 .calendarAdd1 {
 	color: #111;
 }
-.calendarAdd1 .calendar-ct .days li{line-height: 50px !important;height: 50px!important;}
+
+.calendarAdd1 .calendar-ct .days li {
+	line-height: 50px !important;
+	height: 50px !important;
+}
+
 .old {
 	color: #ccc;
 }
+
 /* 评论列表 */
-.com_p{color: #999;margin-bottom: 10px;line-height: 24px;position: relative;}
-.com_name{color: #333;}
-.com_time{margin: 0 5px;}
-.blue_a{display: inline-block;color: #349EDF;margin-left: 5px;margin-top: 8px;}
-.com_title{color: #666;position: relative;}
-.com_title i{color: #1fa67a;}
-.com_a_box{display: inline-block;float: right;position: absolute;top: 0;right: 0;}
-.com_a_box a{display: inline-block;color: #349EDF;margin-left: 10px;font-size: 14px;}
+.com_p {
+	color: #999;
+	margin-bottom: 10px;
+	line-height: 24px;
+	position: relative;
+}
 
-.addtable1{background-color: #fff;width: 100%;white-space: nowrap;}
+.com_name {
+	color: #333;
+}
 
-.min_num{position: relative;}
-			.min_num span{
-				display: inline-block;
-				    min-width: 10px;
-				    padding: 3px 7px;
-				    font-size: 12px;
-				    font-weight: 700;
-				    line-height: 1;
-				    color: #fff;
-				    text-align: center;
-				    white-space: nowrap;
-				    vertical-align: middle;
-				    background-color: red;
-				    border-radius: 10px;
-					position: absolute;
-					left: 20px;top: -8px;
-				}
-			#avatar{position: relative;cursor: pointer;}
-			#avatar img{position: absolute;width: 36px;height: auto;border-radius: 50%;top: 15%;}
-			.avatar_box{position: absolute;top: 55px;width: 100%;right: 0;background-color: #fff;color: #666;z-index: 999;font-size: 14px;
-			border: 1px solid #e7e7e7;border-top: 0;box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-			}
-			.avatar_box li{width: 100%;}
+.com_time {
+	margin: 0 5px;
+}
 
+.blue_a {
+	display: inline-block;
+	color: #349EDF;
+	margin-left: 5px;
+	margin-top: 8px;
+}
 
+.com_title {
+	color: #666;
+	position: relative;
+}
 
+.com_title i {
+	color: #1fa67a;
+}
 
+.com_a_box {
+	display: inline-block;
+	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.com_a_box a {
+	display: inline-block;
+	color: #349EDF;
+	margin-left: 10px;
+	font-size: 14px;
+}
+
+.addtable1 {
+	background-color: #fff;
+	width: 100%;
+	white-space: nowrap;
+}
+
+.min_num {
+	position: relative;
+}
+
+.min_num span {
+	display: inline-block;
+	min-width: 10px;
+	padding: 3px 7px;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	background-color: red;
+	border-radius: 10px;
+	position: absolute;
+	left: 20px;
+	top: -8px;
+}
+
+#avatar {
+	position: relative;
+	cursor: pointer;
+}
+
+#avatar img {
+	position: absolute;
+	width: 36px;
+	height: auto;
+	border-radius: 50%;
+	top: 15%;
+}
+.avatar_box {
+	position: absolute;
+	top: 55px;
+	width: 100%;
+	right: 0;
+	background-color: #fff;
+	color: #666;
+	z-index: 999;
+	font-size: 14px;
+	border: 1px solid #e7e7e7;
+	border-top: 0;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+.avatar_box li {
+	width: 100%;
+}
+
+/* tab选项卡 */
+.tab {
+	font-size: 14px;
+	width: 100%;
+	border: 1px solid #ddd;
+	/* 盒子的总宽度w=298+1+1=300px */
+	height: 100%;
+	overflow: hidden;
+	/* 点击导航栏第一个或最后一个标签时，超出的部分隐藏*/
+}
+.tab-tit {
+	position: relative;
+	height: 35px;
+}
+.tab-tit ul {
+	position: absolute;
+	width: 100%;
+	left: -1px;
+	/* 当点击第一个导航栏标签时，左边边框会与大盒子的边框发生叠加，解决的方法利用定位让两个边框重合叠加在一起 */
+	height: 35px;
+	background: #f7f7f7;
+	border-bottom: 1px solid #ddd;
+}
+.tab-tit ul li {
+	float: left;
+	width: 85px;
+	padding: 0 1px;
+	height: 35px;
+	text-align: center;
+	line-height: 35px;
+	cursor: pointer;
+}
+.tab-tit ul li.selected {
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	background: #fff;
+	padding: 0;
+	border-bottom: 1px solid #fff;
+}
+.tab-con .tab-child {
+	height: 100%;
+	padding:15px 30px;
+	display: none;
+}
+/* tab结束 */
+
+.set_input label{width: 100px;}
