@@ -224,6 +224,7 @@ ul:after {
 	.header_r{position: relative;bottom: 55px;right: 0;}
 	#avatar{width: 50px;height: 55px;}
 	.header_ul{margin-right: 15px!important;}
+	.avatar_box{width: 250%!important;}
 	
 	
 	#bar{left: 20px!important;}
