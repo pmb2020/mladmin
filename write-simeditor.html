@@ -5,16 +5,17 @@
 		<title>迷鹿后台管理系统</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="lib/simditor/css/simditor.css"/>
 		<link rel="stylesheet" type="text/css" href="css/base.css">
 		<style>
 			/* 编辑器 */
-			.w-e-toolbar .w-e-menu{padding: 10px 15px!important;}
+			/* .w-e-toolbar .w-e-menu{padding: 10px 15px!important;}
 			.w-e-text-container{height: 380px!important;}
 			@media screen and (max-width:576px) {
 			#editor{width: 100%!important;}
 			.w-e-toolbar .w-e-menu{padding: 8px 10px!important;}
 			.w-e-text-container{height: 300px!important;}
-			}
+			} */
 			
 		</style>
 	</head>
@@ -91,12 +92,16 @@
 									</select>
 								</div>
 							</div>
-							<div class="m_input_item" style="height: 100%">
+							<div class="simeditor_div" style="display: flex;margin: 30px 0;">
+								<label style="width: 60px;">内容：</label>
+								<textarea id="editor" placeholder="Balabala" autofocus></textarea>
+							</div>
+							<!-- <div class="m_input_item" style="height: 100%;overflow: hidden;">
 								<label>内容：</label>
 								<input type="hidden" name="content" id="editor_txt">
 								<div id="editor" style="display: inline-block;width: 80%">
 								</div>
-							</div>
+							</div> -->
 							<div class="m_input_item" style="height: 180px">
 								<label>封面:</label>
 								<input type="hidden" id="img_url"  name="img_url">
@@ -119,6 +124,36 @@
 	<script type="text/javascript" src="js/wangEditor.min.js"></script>
 	<script src="js/upload.js"></script>
 	<script src="js/base.js"></script>
+	<script src="lib/simditor/js/module.js"></script>
+	<script src="lib/simditor/js/hotkeys.js"></script>
+	<script src="lib/simditor/js/uploader.js"></script>
+	<script src="lib/simditor/js/simditor.js"></script>
+	<script>
+		$(function(){
+			var editor = new Simditor({
+			  textarea: $('#editor'),
+			  toolbar: [
+			          'title', 'bold', 'italic', 'underline', 'strikethrough', 'fontScale',
+			          'color', '|', 'ol', 'ul', 'blockquote', 'code', 'table', '|', 'link',
+			          'image', 'hr', '|', 'alignment'
+			      ],
+			  placeholder:'写点什么呢......',
+			  defaultImage:'images/author.png',//插入图片显示的默认图片
+			  params:{
+				  'key':'v'
+			  },//在textarea中插入一个隐藏的输入以存储参数
+			  pasteImage:true,//是否允许直接粘贴图片
+			  cleanPaste:true,//自动删除粘贴内容中的所有样式
+			  upload:{
+				  url:'/api/api.php',
+				  params:null,
+				  fileKey:'uploadFile',//后台接收图片需要
+				  connectionCount:3,//允许同时上传图片数
+				  leaveConfirm:'正在上传图片',//如果在上传文件时离开页面，则会显示此消息；
+			  }
+			});
+		});
+	</script>
 	<script type="text/javascript">
 			var file='';
 			var dragImgUpload = new DragImgUpload("#drop_area",{
@@ -196,8 +231,15 @@
 	    $('#fb_btn').click(function () {
 	    	var editor_txt=editor.txt.html();
 	    	document.getElementById('editor_txt').value=editor_txt;
+			alert('ss');
+			return false;
 	    	console.log(file);
-	    })
+	    });
+		$('.m_btn').click(function(){
+			$('#editor').val();
+			console.log($('#editor').val());
+		});
+		
 	    $('#type').change(function (e) {
 	    	if ($(this).val()==2) {
 	    		console.log('asa');
