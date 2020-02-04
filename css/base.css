@@ -330,7 +330,7 @@ ul:after {
 
 .header {
 	/* #ff3d37 红色;#1fa67a青色*/
-	background-color: #ff3d37;
+	background-color: #2f323e;
 	height: 55px;
 }
 
@@ -439,8 +439,16 @@ ul:after {
 	position: relative;
 	white-space: nowrap;
 }
-
+.fa-fw{
+	text-align: center!important;
+	display: inline-block;
+	font-style: normal;
+	font-weight: 500;
+	margin-right: 10px;
+	font-size: 16px;
+	vertical-align: middle;}
 .nav_ul {
+	padding-top: 5px;
 	overflow: hidden;
 	transition: width 0.8s;
 	-moz-transition: width 0.8s;
@@ -449,10 +457,6 @@ ul:after {
 	/* Safari 和 Chrome */
 	-o-transition: width 0.8s;
 	/* Opera */
-}
-
-.nav_ul i {
-	margin-right: 10px;
 }
 
 /* .nav_ul li{padding: 12px;} */
