@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>迷鹿后台管理系统</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style>
+			.test_table{
+				border: 1px solid #e6e6f2;
+			}
+			.test_table td,th{text-align: left!important;border: 1px solid #dee2e6;}
+			.test_table tbody>tr:nth-of-type(odd){background-color: rgba(0,0,0,.05);}
+			.btn{padding: 3px 6px;color: #fff;border: none;font-size: 12px;border-radius: 3px;cursor: pointer;}
+			.add_btn{background-color:#2fb9d4;padding: 8px 10px;font-size: 14px;}
+			.cate_txt{color: blue;margin-right: 5px;background-color: #9c9c9c;padding: 8px 10px;color: #fff;font-size: 14px;border-radius: 3px;}
+			.edit_btn{background-color: #5cb85c;}
+			.del_btn{background-color: #d9534f;}
+			
+			#alert_model{
+				position: fixed;top: 0;left: 0;
+				background-color: #000;
+				width: 100%;height: 100%;
+				z-index: 100;
+				opacity: 0.5;
+				}
+			.model_body{width: 500px;height: 300px;background-color: #000080;opacity: 1;z-index: 1191017;}
+			.model_body1{max-width: 600px;margin: auto;max-height: 600px;z-index: 1000;opacity: 1;background-color: #fff;}
+		</style>
+	</head>
+	<body>
+		<header class="header">
+			<div class="header_l" style="">
+				<div class="logo">
+					<a href="#"><img src="images/logo.png" /></a>
+				</div>
+				<button id="bar" style="">
+					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
+				</button>
+			</div>
+			<div class="header_r" style="">
+				<ul class="header_ul ">
+					<li><i class="fa fa-bell-o icon_fff min_num" aria-hidden="true"><span>2</span></i></li>
+					<li id="avatar">
+						<img src="images/author.png" alt="">
+						<span class="header_name d-none">管理员</span>
+						<i class="fa fa-sort-desc icon_fff d-none" aria-hidden="true"></i>
+						<div class="avatar_box" style="display: none;">
+							<ul>
+								<li>设置</li>
+								<li><a href="#">退出</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<nav class="nav">
+			<ul class="nav_ul">
+				<li><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>后台首页</a></li>
+				<li><a href="list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>文章管理</a></li>
+				<li><a href="write.html"><i class="fa fa-table fa-fw" aria-hidden="true"></i>分类管理</a></li>
+				<li><a href="#"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>标签管理</a></li>
+				<li><a href="comment.html"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>评论管理</a></li>
+				<li><a href="#"><i class="fa fa-link fa-fw" aria-hidden="true"></i>友链管理</a></li>
+				<li><a href="webtj.html"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i>网站统计</a></li>
+				<li><a href="webset.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>系统设置</a></li>
+			</ul>
+		</nav>
+		<!-- 弹出的模态框 -->
+		<div id="alert_model" style="display: none;">
+			<div class="model_body">
+				<p>添加分类</p>
+				<div style="height: 300px;background-color: red;">
+					<p>添加分类</p>
+				</div>
+			</div>
+		</div>
+		<div class="main" style="">
+			<div class="main-content">
+				<div class="main-top">
+					<p class="mbaoxie"><a href="/">首页</a><span>/</span>文章分类</p>
+					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你！</p>
+				</div>
+				<div class="box_padd30">
+					<div class="main-box">
+						<div>
+							<span class="cate_txt">分类列表</span>
+							<button class="btn add_btn" type="button">新增分类</button>
+						</div>
+						
+						<table class="table test_table" style="" >
+							<thead>
+								<tr>
+									<th>ID</th>
+									<th>名称</th>
+									<th>关键词</th>
+									<th>描述</th>
+									<th>状态</th>
+									<th>排序</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>爱分享</td>
+									<td>分享</td>
+									<td>好朋友就要一起分享</td>
+									<td>正常</td>
+									<td>1</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>爱生活</td>
+									<td>生活</td>
+									<td>好生活不止眼前的苟且</td>
+									<td>正常</td>
+									<td>4</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>爱技术</td>
+									<td>技术</td>
+									<td>我掌握全世界最牛逼的技术</td>
+									<td>正常</td>
+									<td>2</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>爱拼搏</td>
+									<td>拼搏</td>
+									<td>拼搏吧</td>
+									<td>正常</td>
+									<td>3</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						
+					
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/base.js"></script>
+</html>

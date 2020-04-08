@@ -3,8 +3,10 @@
 	margin: 0;
 }
 
+html,
 body {
 	background-color: #f6f6f6;
+	height: 100%;
 }
 
 a {
@@ -24,11 +26,13 @@ ul:after {
 	clear: both;
 	display: block;
 }
-.clear:after{
+
+.clear:after {
 	content: '';
 	clear: both;
 	display: block;
 }
+
 /* 我的自定义样式 */
 .row {
 	display: -webkit-box;
@@ -175,7 +179,16 @@ ul:after {
 	border-radius: 2px;
 	cursor: pointer;
 }
-.m_textarea{width: 100%;resize: none;padding: 10px;border-radius: 4px;border: 1px solid #c8cccf;height: 100%;}
+
+.m_textarea {
+	width: 100%;
+	resize: none;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid #c8cccf;
+	height: 100%;
+}
+
 #stype {
 	display: inline-block;
 }
@@ -323,6 +336,22 @@ ul:after {
 		width: 100% !important;
 	}
 
+	/* 登录页面 */
+	.login_box {
+		width: 320px !important;
+	}
+
+	.login_img {
+		margin: 5px auto !important;
+	}
+
+	.login_input_div {
+		margin: 10px 0 !important;
+	}
+
+	.login_btn {
+		margin: 10px 0 !important;
+	}
 
 }
 
@@ -439,14 +468,17 @@ ul:after {
 	position: relative;
 	white-space: nowrap;
 }
-.fa-fw{
-	text-align: center!important;
+
+.fa-fw {
+	text-align: center !important;
 	display: inline-block;
 	font-style: normal;
 	font-weight: 500;
 	margin-right: 10px;
 	font-size: 16px;
-	vertical-align: middle;}
+	vertical-align: middle;
+}
+
 .nav_ul {
 	padding-top: 5px;
 	overflow: hidden;
@@ -771,6 +803,7 @@ ul:after {
 	border-radius: 50%;
 	top: 15%;
 }
+
 .avatar_box {
 	position: absolute;
 	top: 55px;
@@ -784,6 +817,7 @@ ul:after {
 	border-top: 0;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
 }
+
 .avatar_box li {
 	width: 100%;
 }
@@ -798,10 +832,12 @@ ul:after {
 	overflow: hidden;
 	/* 点击导航栏第一个或最后一个标签时，超出的部分隐藏*/
 }
+
 .tab-tit {
 	position: relative;
 	height: 35px;
 }
+
 .tab-tit ul {
 	position: absolute;
 	width: 100%;
@@ -811,6 +847,7 @@ ul:after {
 	background: #f7f7f7;
 	border-bottom: 1px solid #ddd;
 }
+
 .tab-tit ul li {
 	float: left;
 	width: 85px;
@@ -820,6 +857,7 @@ ul:after {
 	line-height: 35px;
 	cursor: pointer;
 }
+
 .tab-tit ul li.selected {
 	border-left: 1px solid #ddd;
 	border-right: 1px solid #ddd;
@@ -827,11 +865,170 @@ ul:after {
 	padding: 0;
 	border-bottom: 1px solid #fff;
 }
+
 .tab-con .tab-child {
 	height: 100%;
-	padding:15px 30px;
+	padding: 15px 30px;
 	display: none;
 }
+
 /* tab结束 */
 
-.set_input label{width: 100px;}
+.set_input label {
+	width: 100px;
+}
+
+/* 登录页面 */
+.login_div {
+	height: 100%;
+	color: #626262;
+	;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #66e8dc;
+}
+
+.login_box {
+	width: 360px;
+	background-color: #fff;
+	padding: 15px 20px;
+	box-shadow: 0px 0px 43px -2px rgba(135, 130, 135, 1);
+	border-radius: 8px;
+}
+
+.login_btn {
+	width: 100%;
+	height: 50px;
+	background: #32bfb2;
+	color: #fff;
+	box-shadow: 0 5px 30px rgba(0, 66, 255, .3);
+	padding: 6px 12px;
+	cursor: pointer;
+	border: 1px solid transparent;
+	margin: 15px 0;
+	border-radius: 4px;
+}
+
+.login_img {
+	margin: 10px auto 20px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.login_img img {
+	width: 100%;
+}
+
+.login_input_div {
+	width: 100%;
+	display: inline-block;
+	margin: 15px 0;
+}
+
+.login_input_div input {
+	line-height: 2.2;
+	border-radius: 5px;
+}
+
+/*分页样式*/
+.pagination {
+	text-align: center;
+	width: 100%;
+	clear: both;
+	margin: 10px 0;
+}
+
+.pagination li {
+	border-bottom: 0;
+	display: inline-block;
+	margin: 0 10px;
+}
+
+.pagination .active span {
+	padding: 5px 15px;
+	background-color: #ff3d37;
+	color: #fff;
+}
+
+.pagination li a {
+	color: #666;
+	padding: 5px 15px;
+	background: #f3f3f3;
+	display: inline-block;
+}
+
+/* 消息弹出框样式 */
+#msg {
+	position: fixed;
+	top: 50%;
+	text-align: center;
+	width: 100%;
+}
+
+#msg span {
+	color: #fff;
+	font-size: 14px;
+	background: rgba(0, 0, 0, 0.6);
+	max-width: 260px;
+	display: inline-block;
+	padding: 15px 15px;
+	border-radius: 4px;
+}
+
+/* 模态框样式 */
+#modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgb(0, 0, 0, .4);
+	z-index: 100;
+}
+
+.modal_content {
+	border-radius: 8px;
+	background-color: #fff;
+	margin: 80px auto;
+	max-width: 500px;
+	animation: hideIndex 0.5s;
+	-moz-animation: hideIndex 0.5s;
+	/* Firefox */
+	-webkit-animation: hideIndex 0.5s;
+	/* Safari and Chrome */
+}
+
+.modal_header {
+	padding: 15px;
+	border-bottom: 1px solid #eee;
+}
+
+.close_btn {
+	float: right;
+	outline: none;
+	background-color: #02abcd;
+}
+
+.modal_body {
+	padding: 15px;
+	min-height: 200px;
+}
+
+.hide {
+	display: none;
+}
+
+@keyframes hideIndex {
+	0% {
+		opacity: 0;
+		transform: translate(0, -200px)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0)
+	}
+}

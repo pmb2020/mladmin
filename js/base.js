@@ -79,6 +79,14 @@ $(function() {
 	    
 	
 	
-	
-	
 })
+// 不依赖jQuery的消息弹出框
+function msg(value){
+	document.body.innerHTML += '<div id=\'msg\'><span>'+value+'</span></div>';
+	setTimeout(function(){
+			var msg=document.getElementById('msg');
+			if(msg != null){
+				msg.parentNode.removeChild(msg)
+			}
+	},1500)
+}

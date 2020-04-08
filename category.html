@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>迷鹿后台管理系统</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<style>
+
+			.table td, .table th{
+				padding: 15px 8px;text-align: left;
+			}
+			.table tbody tr:hover{background: rgba(0,0,0,.075);}
+			.btn{padding: 3px 6px;color: #fff;border: none;font-size: 12px;border-radius: 3px;cursor: pointer;}
+			.add_btn{background-color:#2fb9d4;padding: 8px 10px;font-size: 14px;float: right;}
+			.cate_txt{margin-right: 5px;padding: 8px 10px;color: #333;font-size: 16px;font-weight: 500;border-radius: 3px;}
+			.edit_btn{background-color: #5cb85c;}
+			.del_btn{background-color: #d9534f;}
+			
+			.form_temp1{font-size: 14px;margin-top: 15px;}
+		</style>
+	</head>
+	<body>
+		<!-- 弹出模态框 -->
+		<div id="modal" class="hide">
+			<div class="modal_content">
+				<div class="modal_header">
+					<p>新增分类 <button class="btn close_btn" type="button" onclick="modalClose()">关闭</button></p>
+				</div>
+				<div class="modal_body">
+					<form class="form_temp1" action="#" method="post">
+						<div class="m_input_item">
+							<label>分类名:</label>
+							<div class="m_input_box"><input class="m_input" type="text" name=""></div>
+						</div>
+						<div class="m_input_item">
+							<label>关键词:</label>
+							<div class="m_input_box"><input class="m_input" type="text" name=""></div>
+						</div>
+						<div class="m_input_item">
+							<label>描述:</label>
+							<div class="m_input_box"><input class="m_input" type="text" name=""></div>
+						</div>
+						<div class="m_input_item">
+							<label>排序:</label>
+							<div class="m_input_box"><input class="m_input" type="text" name=""></div>
+						</div>
+						<div class="m_input_item">
+							<label></label>
+							<div class="m_input_box"><input class="m_btn" type="submit" value="提交" /></div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<header class="header">
+			<div class="header_l" style="">
+				<div class="logo">
+					<a href="#"><img src="images/logo.png" /></a>
+				</div>
+				<button id="bar" style="">
+					<i class="fa fa-bars" aria-hidden="true" style="font-size: 28px;color: #fff;"></i>
+				</button>
+			</div>
+			<div class="header_r" style="">
+				<ul class="header_ul ">
+					<li><i class="fa fa-bell-o icon_fff min_num" aria-hidden="true"><span>2</span></i></li>
+					<li id="avatar">
+						<img src="images/author.png" alt="">
+						<span class="header_name d-none">管理员</span>
+						<i class="fa fa-sort-desc icon_fff d-none" aria-hidden="true"></i>
+						<div class="avatar_box" style="display: none;">
+							<ul>
+								<li>设置</li>
+								<li><a href="#">退出</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+		<nav class="nav">
+			<ul class="nav_ul">
+				<li><a href="index.html"><i class="fa fa-home fa-fw" aria-hidden="true"></i>后台首页</a></li>
+				<li><a href="list.html"><i class="fa fa-book fa-fw" aria-hidden="true"></i>文章管理</a></li>
+				<li><a href="category.html"><i class="fa fa-table fa-fw" aria-hidden="true"></i>分类管理</a></li>
+				<li><a href="#"><i class="fa fa-tags fa-fw" aria-hidden="true"></i>标签管理</a></li>
+				<li><a href="comment.html"><i class="fa fa-comments fa-fw" aria-hidden="true"></i>评论管理</a></li>
+				<li><a href="#"><i class="fa fa-link fa-fw" aria-hidden="true"></i>友链管理</a></li>
+				<li><a href="webtj.html"><i class="fa fa-area-chart fa-fw" aria-hidden="true"></i>网站统计</a></li>
+				<li><a href="webset.html"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>系统设置</a></li>
+			</ul>
+		</nav>
+		
+		<div class="main" style="">
+			<div class="main-content">
+				<div class="main-top">
+					<p class="mbaoxie"><a href="/">首页</a><span>/</span>文章列表</p>
+					<p class="main-gg">公告：欢迎光临我的后台管理系统，我求求你！</p>
+				</div>
+				<div class="box_padd30">
+					<div class="main-box">
+						<div>
+							<span class="cate_txt">分类列表</span>
+							<button  class="btn add_btn" type="button" onclick="show()">新增分类 +</button>
+						</div>
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>名称</th>
+									<th>关键词</th>
+									<th>描述</th>
+									<th>状态</th>
+									<th>排序</th>
+									<th>操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>爱分享</td>
+									<td>分享</td>
+									<td>好朋友就要一起分享</td>
+									<td>正常</td>
+									<td>1</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>爱生活</td>
+									<td>生活</td>
+									<td>好生活不止眼前的苟且</td>
+									<td>正常</td>
+									<td>4</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>爱技术</td>
+									<td>技术</td>
+									<td>我掌握全世界最牛逼的技术</td>
+									<td>正常</td>
+									<td>2</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>4</td>
+									<td>爱拼搏</td>
+									<td>拼搏</td>
+									<td>拼搏吧</td>
+									<td>正常</td>
+									<td>3</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+								<tr>
+									<td>5</td>
+									<td>爱分享</td>
+									<td>分享</td>
+									<td>好朋友就要一起分享</td>
+									<td>正常</td>
+									<td>1</td>
+									<td>
+										<button class="btn edit_btn" type="button">编辑</button>
+										<button class="btn del_btn" type="button">删除</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<ul class="pagination">
+							<li class="disabled"><span>«</span></li>
+							<li class="active"><span>1</span></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/base.js"></script>
+	<!-- 模态框 -->
+	<script type="text/javascript">
+		let modal=document.getElementById('modal');
+		function show(){
+			modal.classList.remove('hide')
+			console.log('show')
+		}
+		function modalClose(){
+			modal.classList.add('hide')
+		}
+		// 监听幕布点击,点击幕布关闭弹出框
+		modal.addEventListener('click',function(e){
+			if(e.target.id=='modal'){
+				modal.classList.add('hide')
+			}
+		})
+	</script>
+</html>
