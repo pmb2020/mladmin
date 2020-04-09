@@ -823,53 +823,53 @@ ul:after {
 }
 
 /* tab选项卡 */
-.tab {
-	font-size: 14px;
-	width: 100%;
-	border: 1px solid #ddd;
-	/* 盒子的总宽度w=298+1+1=300px */
-	height: 100%;
-	overflow: hidden;
-	/* 点击导航栏第一个或最后一个标签时，超出的部分隐藏*/
-}
-
-.tab-tit {
-	position: relative;
-	height: 35px;
-}
-
-.tab-tit ul {
-	position: absolute;
-	width: 100%;
-	left: -1px;
-	/* 当点击第一个导航栏标签时，左边边框会与大盒子的边框发生叠加，解决的方法利用定位让两个边框重合叠加在一起 */
-	height: 35px;
-	background: #f7f7f7;
+.tab_ul {
+	margin-bottom: 20px;
 	border-bottom: 1px solid #ddd;
+	font-size: 14px;
+	color: #666;
 }
 
-.tab-tit ul li {
+.tab_ul li {
 	float: left;
-	width: 85px;
-	padding: 0 1px;
-	height: 35px;
-	text-align: center;
-	line-height: 35px;
+	padding: 0 10px 10px;
 	cursor: pointer;
 }
 
-.tab-tit ul li.selected {
-	border-left: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	background: #fff;
-	padding: 0;
-	border-bottom: 1px solid #fff;
+.tab_ul .active {
+	color: #f96332 !important;
+	border-bottom: 2px solid #f96332;
+	margin-bottom: -1px;
 }
 
-.tab-con .tab-child {
-	height: 100%;
-	padding: 15px 30px;
+.tab_content {
+	font-size: 14px;
+	color: #666;
+	min-height: 300px;
+	overflow: hidden;
+}
+
+.tab-child {
 	display: none;
+	animation: hideIndex 0.5s;
+	-moz-animation: hideTab 0.6s;
+	/* Firefox */
+	-webkit-animation: hideTab 0.6s;
+	/* Safari and Chrome */
+}
+.tab-child .m_input{color: #666;}
+.tab-child textarea{color: #666;}
+
+@keyframes hideTab {
+	0% {
+		opacity: 0;
+		transform: translate(200px, 0)
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0, 0)
+	}
 }
 
 /* tab结束 */
