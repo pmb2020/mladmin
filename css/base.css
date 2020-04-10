@@ -167,10 +167,10 @@ ul:after {
 
 .m_btn {
 	display: inline-block;
-	height: 38px;
-	line-height: 38px;
-	padding: 0 18px;
-	background-color: #0e988b;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 25px;
+	background-color: #f96332;
 	color: #fff;
 	white-space: nowrap;
 	text-align: center;
@@ -445,13 +445,13 @@ ul:after {
 }
 
 .nav a:hover {
-	color: #1fa67a;
+	color: #f96332;
 }
 
 .nav a:hover:before {
 	content: '';
 	width: 5px;
-	background-color: #1fa67a;
+	background-color: #f96332;
 	display: block;
 	height: 100%;
 	position: absolute;
@@ -857,8 +857,14 @@ ul:after {
 	-webkit-animation: hideTab 0.6s;
 	/* Safari and Chrome */
 }
-.tab-child .m_input{color: #666;}
-.tab-child textarea{color: #666;}
+
+.tab-child .m_input {
+	color: #666;
+}
+
+.tab-child textarea {
+	color: #666;
+}
 
 @keyframes hideTab {
 	0% {
@@ -1032,3 +1038,38 @@ ul:after {
 		transform: translate(0, 0)
 	}
 }
+
+.btn {
+	padding: 3px 6px;
+	color: #fff;
+	border: none;
+	font-size: 12px;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.add_btn {
+	background-color: #2fb9d4;
+	padding: 8px 10px;
+	font-size: 14px;
+	float: right;
+}
+
+.cate_txt {
+	margin-right: 5px;
+	padding: 8px 10px;
+	color: #333;
+	font-size: 16px;
+	font-weight: 500;
+	border-radius: 3px;
+}
+
+.edit_btn {
+	background-color: #5cb85c;
+}
+
+.del_btn {
+	background-color: #d9534f;
+}
+.modal_form{font-size: 14px;margin-top: 15px;}
+

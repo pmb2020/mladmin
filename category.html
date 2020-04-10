@@ -7,18 +7,10 @@
 		<link rel="stylesheet" type="text/css" href="lib/fonticon/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/base.css">
 		<style>
-
 			.table td, .table th{
 				padding: 15px 8px;text-align: left;
 			}
 			.table tbody tr:hover{background: rgba(0,0,0,.075);}
-			.btn{padding: 3px 6px;color: #fff;border: none;font-size: 12px;border-radius: 3px;cursor: pointer;}
-			.add_btn{background-color:#2fb9d4;padding: 8px 10px;font-size: 14px;float: right;}
-			.cate_txt{margin-right: 5px;padding: 8px 10px;color: #333;font-size: 16px;font-weight: 500;border-radius: 3px;}
-			.edit_btn{background-color: #5cb85c;}
-			.del_btn{background-color: #d9534f;}
-			
-			.form_temp1{font-size: 14px;margin-top: 15px;}
 		</style>
 	</head>
 	<body>
@@ -29,7 +21,7 @@
 					<p>新增分类 <button class="btn close_btn" type="button" onclick="modalClose()">关闭</button></p>
 				</div>
 				<div class="modal_body">
-					<form class="form_temp1" action="#" method="post">
+					<form class="modal_form" action="#" method="post">
 						<div class="m_input_item">
 							<label>分类名:</label>
 							<div class="m_input_box"><input class="m_input" type="text" name=""></div>
@@ -104,7 +96,7 @@
 					<div class="main-box">
 						<div>
 							<span class="cate_txt">分类列表</span>
-							<button  class="btn add_btn" type="button" onclick="show()">新增分类 +</button>
+							<button  class="btn add_btn" type="button" onclick="modalShow()">新增分类 +</button>
 						</div>
 						<table class="table">
 							<thead>
@@ -196,21 +188,4 @@
 	</body>
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/base.js"></script>
-	<!-- 模态框 -->
-	<script type="text/javascript">
-		let modal=document.getElementById('modal');
-		function show(){
-			modal.classList.remove('hide')
-			console.log('show')
-		}
-		function modalClose(){
-			modal.classList.add('hide')
-		}
-		// 监听幕布点击,点击幕布关闭弹出框
-		modal.addEventListener('click',function(e){
-			if(e.target.id=='modal'){
-				modal.classList.add('hide')
-			}
-		})
-	</script>
 </html>
